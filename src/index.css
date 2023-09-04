@@ -1,13 +1,671 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body 
+{
+	font-family: 'Poppins';
+	margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root, body, html
+{
+	max-width: 100%;
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background: linear-gradient(45deg,#33363e 15%, #2d2f36 100%);
+	overflow-x: hidden;
 }
+
+.Welcome
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #F5F5F5;
+}
+
+.Welcome button
+{
+	font-family: 'Poppins';
+	font-size: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+	outline: none;
+	border-radius: 0.25rem;
+	border: 0px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background: #008ec2;
+	height: 2rem;
+	width: 6rem;
+	cursor: pointer;
+	color: whitesmoke;
+}
+
+.Welcome a 
+{
+	text-decoration: none;
+	margin-top: 15px;
+}
+
+
+
+header
+{
+	font-size: large;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-between;
+	padding: 0.5%;
+	background: transparent;
+	height: 4.5%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+header div
+{
+	align-self: center;
+}
+
+header div a
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+header .HeaderButtons
+{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+header .HeaderButtons button
+{
+	font-family: 'Poppins';
+	font-size: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+	outline: none;
+	border-radius: 0.25rem;
+	border: 0px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background: #00b7c2;
+	height: 2rem;
+	width: 6rem;
+}
+
+header .HeaderButtons button a 
+{
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.MessagesApp
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 93%;
+}
+
+.MessagesList
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 80%;
+	height: 90%;
+	margin: 0px;
+}
+
+.receiver 
+{
+	position: relative;
+	margin-right: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 16px;
+	text-align: left;
+	width: fit-content;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	background: #008ec2;
+	border-radius: 1rem;
+	padding: 7px;
+	margin-left: 5px;
+	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
+}
+
+.sender 
+{
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 16px;
+	text-align: right;
+	width: fit-content;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	background: #008ec2;
+	border-radius: 1rem;
+	padding: 7px;
+	margin-right: 5px;
+	box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2), 0 4px 6px 0 rgba(0,0,0,0.19);
+}
+
+.Message
+{
+	font-size: 18px;
+	height: 100%;
+	width: auto;
+}
+
+.Date
+{
+	width: auto;
+	font-size: 9px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+.sender .Date
+{
+	text-align: left;
+}
+
+.receiver .Date
+{
+	text-align: right;
+}
+
+.newMessageForm
+{
+	display: flex;
+	width: 100%;
+	height: 7%;
+}
+
+.newMessageForm form
+{
+	width: 100%;
+	margin-top: 1%;
+	height: 100%;
+}
+
+.newMessageForm form input
+{
+	width: 95%;
+	height: 100%;
+	border: 0 solid;
+	border-radius: 1.5rem;
+	background: #24252b;
+	color: white;
+	outline: none;
+	font-family: 'Poppins';
+	text-indent: 1.5%;
+	font-size: large;
+	color: white;
+	text-overflow: clip;
+	box-shadow: 0 6px 8px 0 rgba(0,0,0,0.5), 0 4px 6px 0 rgba(0,0,0,0.19);
+}
+
+.newMessageForm form button
+{
+	width: 5%;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 32px;
+	margin-right: auto;
+	margin-right: 3%;
+}
+
+.ChatBody
+{
+	height: auto;
+	justify-content: flex-end;
+	overflow-y: auto;
+	width: 92%;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #000000;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #F5F5F5;
+}
+
+.friendsButtons
+{
+	width: 19%;
+	padding: 0;
+	margin: 10px;
+	height: max-content;
+	border-bottom-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border-top-left-radius: 1rem;
+	overflow: hidden;
+}
+
+.friendsButtons button 
+{
+	background: #282a30;
+	font-family: 'Poppins';
+	font-size: 120%;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	width: 100%;
+	height: 7vh;
+	text-align: left;
+	border: 0;
+	color: #F5F5F5;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0 6px 8px 0 rgba(0,0,0,0.5), 0 4px 6px 0 rgba(0,0,0,0.19);
+	text-indent: 5%;
+	overflow: hidden;
+}
+
+.friendsButtons button div
+{
+	align-self: center;
+}
+
+.friendsButtons button .addFriendsButton
+{
+	align-self: center;
+	width: 100%;
+}
+
+.friendsButtons button .Name
+{
+	width: 50%;
+	text-align: center;
+	align-self: center;
+	text-align: left;
+}
+
+.friendsButtons button .LastMessage
+{
+	height: auto;
+	width: 47%;
+	text-align: right;
+	align-self: center;
+	font-size: 16px;
+	font-weight: 500;
+	color: #73737b;
+	text-overflow: clip;
+	margin-right: 3%;
+	/* margin-top: auto; */
+}
+
+.friendsButtons button a
+{
+	text-decoration: none;
+	color: #F5F5F5;
+	width: 100%;
+}
+
+.LoginForm
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 97%;
+}
+
+.LoginForm p
+{
+	text-align: end;
+}
+
+.LoginForm form
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	height: 40%;
+}
+
+.LoginForm form label
+{
+	margin-top: 25px;
+	align-self: flex-start;
+}
+
+.LoginForm form input
+{
+	width: 100%;
+	border: 0;
+	outline: none;
+	height: 12.5%;
+	margin: 10px;
+	background: #394046;
+	border-radius: 1rem;
+	text-indent: 10px;
+	font-size: 90%;
+	color: #F5F5F5;
+	font-family: 'Poppins';
+}
+
+.LoginForm form button
+{
+	width: 50%;
+	border: 0;
+	outline: none;
+	border-radius: 1rem;
+	height: 12%;
+	margin-top: 20px;
+	font-family: 'Poppins';
+	background: linear-gradient(to right, #fff3f3, #f7adad);
+	font-size: larger;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.LoginForm form button:focus
+{
+	animation: pressed 0.2s;
+}
+
+.LoginForm .signup a
+{
+	color: #008ec2;
+}
+
+.SignupForm
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 95%;
+}
+
+.SignupForm p
+{
+	text-align: end;
+}
+
+.SignupForm form
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	height: 68%;
+}
+
+.SignupForm form label
+{
+	margin-top: 25px;
+	align-self: flex-start;
+}
+.SignupForm form .imageLabel
+{
+	align-self: center;
+	cursor: pointer;
+	transition: all 1s;
+}
+
+.SignupForm form .imageLabel:hover
+{
+	animation: imageAnimation 1s;
+	transition: all 1s;
+	scale: 120%;
+}
+
+@keyframes imageAnimation 
+{
+	0%
+	{
+		scale: 100%;
+	}
+	100%
+	{
+		scale: 120%;
+	}
+}
+
+.SignupForm form input
+{
+	width: 100%;
+	border: 0;
+	outline: none;
+	height: 12%;
+	margin: 10px;
+	background: #394046;
+	border-radius: 1rem;
+	text-indent: 10px;
+	font-size: 90%;
+	color: #F5F5F5;
+	font-family: 'Poppins';
+}
+
+.SignupForm form input[type='file']
+{
+	display: none;
+}
+
+.SignupForm form button
+{
+	width: 50%;
+	border: 0;
+	outline: none;
+	border-radius: 1rem;
+	height: 12%;
+	margin-top: 20px;
+	font-family: 'Poppins';
+	background: linear-gradient(to right, #fff3f3, #f7adad);
+	font-size: larger;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.SignupForm form button:focus
+{
+	animation: pressed 0.2s;
+}
+
+.SignupForm .signup a
+{
+	color: #008ec2;
+}
+
+.SettingsForm
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 97%;
+}
+
+.SettingsForm p
+{
+	text-align: end;
+}
+
+.SettingsForm form
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	height: 65%;
+}
+
+.SettingsForm form label
+{
+	margin-top: 25px;
+	align-self: flex-start;
+}
+.SettingsForm form .imageLabel
+{
+	align-self: center;
+	cursor: pointer;
+	transition: all 1s;
+}
+
+.SettingsForm form .imageLabel:hover
+{
+	animation: imageAnimation 1s;
+	transition: all 1s;
+	scale: 120%;
+}
+
+@keyframes imageAnimation 
+{
+	0%
+	{
+		scale: 100%;
+	}
+	100%
+	{
+		scale: 120%;
+	}
+}
+
+.SettingsForm form input
+{
+	width: 100%;
+	border: 0;
+	outline: none;
+	height: 8%;
+	margin: 10px;
+	background: #394046;
+	border-radius: 1rem;
+	text-indent: 10px;
+	font-size: 90%;
+	color: #F5F5F5;
+	font-family: 'Poppins';
+}
+
+.SettingsForm form input[type='file']
+{
+	display: none;
+}
+
+.SettingsForm form button
+{
+	width: 50%;
+	border: 0;
+	outline: none;
+	border-radius: 1rem;
+	height: 8%;
+	margin-top: 20px;
+	font-family: 'Poppins';
+	background: linear-gradient(to right, #fff3f3, #f7adad);
+	font-size: larger;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.SettingsForm form button:focus
+{
+	animation: pressed 0.2s;
+}
+
+@keyframes pressed {
+	0%
+	{
+		scale: 1;
+	}
+	100%
+	{
+		scale: 0.6;
+	}
+}
+
+.FindFriend
+{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.FindFriend p
+{
+	text-align: end;
+}
+.FindFriend form
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-end;
+	width: 40%;
+	height: 20%;
+	margin-bottom: 20px;
+}
+.FindFriend form input
+{
+	width: 100%;
+	border: 0;
+	outline: none;
+	height: 23%;
+	margin: 10px;
+	margin-bottom: 0;
+	background: #394046;
+	border-radius: 1rem;
+	text-indent: 10px;
+	font-size: 20px;
+	color: #F5F5F5;
+	font-family: 'Poppins';
+}
+.FindFriend form button
+{
+	width: 30%;
+	border: 0;
+	outline: none;
+	border-radius: 1rem;
+	height: 20%;
+	font-family: 'Poppins';
+	background: linear-gradient(to right, #fff3f3, #f7adad);
+	font-size: larger;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-bottom: 0.65%;
+}
+.FindFriend form button:focus
+{
+	animation: pressed 0.2s;
+}
+
