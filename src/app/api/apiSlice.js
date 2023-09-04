@@ -3,7 +3,7 @@ import { setCredentials } from '../../features/auth/authSlice'
 
 const baseQuery = fetchBaseQuery(
     {
-        baseUrl: 'http://localhost:3001',
+        baseUrl: 'https://chatapp-najajer-api.onrender.com',
         credentials: 'include',
         prepareHeaders: (headers, { getState }) => 
         {
